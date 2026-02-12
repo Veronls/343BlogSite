@@ -64,7 +64,7 @@ nav a.active {
   background: white;
   padding: 2.5rem;
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
   margin-bottom: 3rem;
 }
 
@@ -79,7 +79,7 @@ nav a.active {
   padding: 2rem;
   border-radius: 12px;
   margin-bottom: 2rem;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease;
 }
 
@@ -131,7 +131,7 @@ nav a.active {
   background: white;
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
   text-align: center;
 }
 
@@ -176,7 +176,7 @@ footer {
   border: 1px solid rgba(2, 132, 199, 0.12);
   padding: 0.85rem 1rem;
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
 }
 
 .member-item a {
@@ -200,7 +200,7 @@ footer {
   background: white;
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
 .resource-card h3 {
@@ -216,7 +216,7 @@ footer {
   background: white;
   padding: 3rem;
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
 .full-blog h2 {
@@ -253,4 +253,68 @@ footer {
   font-weight: normal;
   color: #64748b;
   font-size: 0.9rem;
+}
+
+/* ===============================
+   Concepts Page Custom Layout
+=================================*/
+
+.concepts-layout h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.concept-row {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  align-items: start;
+}
+
+.concept-large img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.15);
+}
+
+.concept-text p {
+  margin-bottom: 1rem;
+  color: #334155;
+}
+
+.concept-small-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.concept-small img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.15);
+  margin-bottom: 0.75rem;
+}
+
+.concept-small p {
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+.env-title {
+  margin-top: 2rem;
+}
+
+.env-description {
+  margin-bottom: 2rem;
+  color: #334155;
+  max-width: 750px;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .concept-row {
+    grid-template-columns: 1fr;
+  }
 }
