@@ -318,3 +318,95 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===============================
+   Storyboard Audio Grid
+=================================*/
+
+.audio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.audio-card {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-align: center;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+}
+
+.audio-card h4 {
+  margin-bottom: 0.75rem;
+}
+
+.audio-card button {
+  background: #0284c7;
+  color: white;
+  border: none;
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.audio-card button:hover {
+  background: #0369a1;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .audio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 450px) {
+  .audio-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===============================
+   Storyboard Panel Images
+=================================*/
+
+.panel-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.75rem;
+  border: 1px solid rgba(15, 23, 42, 0.15);
+  object-fit: cover;
+}
+
+/* Make cards slightly taller & balanced */
+.audio-card {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+}
+
+.audio-card button {
+  margin-top: auto; /* pushes button to bottom */
+  background: #0284c7;
+  color: white;
+  border: none;
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.audio-card button:hover {
+  background: #0369a1;
+}

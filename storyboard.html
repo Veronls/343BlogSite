@@ -22,7 +22,7 @@
 
     <main class="container">
       <section class="intro">
-        <h2>Character / Environment Concepts</h2>
+        <h2>StoryBoard</h2>
         <p></p>
 
         <div class="resource-grid">
@@ -37,6 +37,118 @@
                 border: 1px solid rgba(15, 23, 42, 0.15);
               "
             />
+            <h3 style="margin-top: 2rem">Storyboard Audio Panels</h3>
+
+            <div class="audio-grid">
+              <!-- Panel 1 -->
+              <div class="audio-card">
+                <h4>Panel 1</h4>
+                <img
+                  src="images/panel1.png"
+                  alt="Storyboard Panel 1"
+                  class="panel-image"
+                />
+                <button onclick="playAudio(1)">Play Audio</button>
+                <audio id="audio1" src="audio/Scene 1.m4a"></audio>
+              </div>
+
+              <!-- Panel 2 -->
+              <div class="audio-card">
+                <h4>Panel 2</h4>
+                <img
+                  src="images/panel2.png"
+                  alt="Storyboard Panel 2"
+                  class="panel-image"
+                />
+                <button onclick="playAudio(2)">Play Audio</button>
+                <audio id="audio2" src="audio/Scene 2.m4a"></audio>
+              </div>
+
+              <!-- Panel 3 -->
+              <div class="audio-card">
+                <h4>Panel 3</h4>
+                <img
+                  src="images/panel3.png"
+                  alt="Storyboard Panel 3"
+                  class="panel-image"
+                />
+                <button onclick="playAudio(3)">Play Audio</button>
+                <audio id="audio3" src="audio/Scene 3.m4a"></audio>
+              </div>
+
+              <!-- Panel 4 -->
+              <div class="audio-card">
+                <h4>Panel 4</h4>
+                <img
+                  src="images/panel4.png"
+                  alt="Storyboard Panel 4"
+                  class="panel-image"
+                />
+                <button onclick="playAudio(4)">Play Audio</button>
+                <audio id="audio4" src="audio/Scene 4.m4a"></audio>
+              </div>
+
+              <!-- Panel 5 -->
+              <div class="audio-card">
+                <h4>Panel 5</h4>
+                <img
+                  src="images/panel5.png"
+                  alt="Storyboard Panel 5"
+                  class="panel-image"
+                />
+                <button onclick="playAudio(5)">Play Audio</button>
+                <audio id="audio5" src="audio/Scene 5.m4a"></audio>
+              </div>
+
+              <!-- Panel 6 -->
+              <div class="audio-card">
+                <h4>Panel 6</h4>
+                <img
+                  src="images/panel6.png"
+                  alt="Storyboard Panel 6"
+                  class="panel-image"
+                />
+                <button onclick="playAudio(6)">Play Audio</button>
+                <audio id="audio6" src="audio/Scene 6.m4a"></audio>
+              </div>
+
+              <!-- Panel 7 -->
+              <div class="audio-card">
+                <h4>Panel 7</h4>
+                <img
+                  src="images/panel7.png"
+                  alt="Storyboard Panel 7"
+                  class="panel-image"
+                />
+                <button onclick="playAudio(7)">Play Audio</button>
+                <audio id="audio7" src="audio/Scene 7.m4a"></audio>
+              </div>
+
+              <!-- Panel 8 -->
+              <div class="audio-card">
+                <h4>Panel 8</h4>
+                <img
+                  src="images/panel8.png"
+                  alt="Storyboard Panel 8"
+                  class="panel-image"
+                />
+                <button onclick="playAudio(8)">Play Audio</button>
+                <audio id="audio8" src="audio/Scene 8.m4a"></audio>
+              </div>
+
+              <!-- Panel 9 -->
+              <div class="audio-card">
+                <h4>Panel 9</h4>
+                <img
+                  src="images/panel9.png"
+                  alt="Storyboard Panel 9"
+                  class="panel-image"
+                />
+                <button onclick="playAudio(9)">Play Audio</button>
+                <audio id="audio9" src="audio/Scene 9.m4a"></audio>
+              </div>
+            </div>
+
             <p style="margin-top: 0.75rem">
               This animation follows a lone, unnamed man moving through a
               unsettling environment that feels empty. The character is kept
@@ -78,5 +190,21 @@
     <footer>
       <p>343 Animation • Simon Fraser University</p>
     </footer>
+
+    <script>
+      function playAudio(num) {
+        const audio = document.getElementById("audio" + num);
+
+        // Pause all other audio first
+        document.querySelectorAll("audio").forEach((a) => {
+          if (a !== audio) {
+            a.pause();
+            a.currentTime = 0;
+          }
+        });
+
+        audio.play();
+      }
+    </script>
   </body>
 </html>
